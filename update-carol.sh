@@ -87,8 +87,8 @@ sleep 2
 
 echo "Reiniciando o daemon e criando o novo servico CarolConnect"
 systemctl daemon-reload
-
-systemctl start /outsourcing/totvs/2c/carolconnector.service
+systemctl enable /outsourcing/totvs/2c/carolconnector.service
+systemctl start carolconnector.service
 if [ $? -eq 0 ]
 		then printf "\e[1;32mOk.\e[0m\n"
 		else printf "\e[1;31mFalha.\e[0m\n"; echo "Nao foi possivel instalar o novo servico. Tente novamente." exit 1;
