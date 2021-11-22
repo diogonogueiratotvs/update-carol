@@ -1,8 +1,9 @@
 #!/bin/bash
+#Script criado por Diogo Nogueira - Squad Cloud RM
 clear
-echo "===============T O T V S - C L O U D ==============================="
-echo "===========PROCESSO DE ATUALIZACAO DA CAROL - 2C==========="
-echo "========================================================"
+echo "===================T O T V S - C L O U D==========================="
+echo "============SCRIPT DE ATUALIZACAO DA CAROL - 2C===================="
+echo "==================================================================="
 ################################################
 #Inicio do script.
 
@@ -15,7 +16,7 @@ sleep 1
 
 echo ""
 echo ""
-echo "Qual versao deseja instalar? Exemplo: '3.3.8'. "
+echo "Qual versao deseja instalar? Exemplo: '3.3.8'"
 read VCAROL
 
 echo "Realizando o download da versao $VCAROL"
@@ -116,5 +117,5 @@ echo "."
 echo "."
 echo "."
 
-echo "Atualizacao finalizada com sucesso."
+echo "A atualizacao para a versao $VCAROL finalizada com sucesso!"
 
