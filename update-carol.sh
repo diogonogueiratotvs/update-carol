@@ -6,21 +6,20 @@ echo "============SCRIPT DE ATUALIZACAO DA CAROL - 2C===================="
 echo "==================================================================="
 ################################################
 #Inicio do script.
+# echo "Checando ultima versao disponivel..."
+# echo ""
+# sleep 1
+# curl --silent https://storage.googleapis.com/labs-2c-releases-1/CHANGELOG.md | grep "##" | head -n 1
 
-echo "Checando ultima versao disponivel..."
-echo ""
-sleep 1
-curl --silent https://storage.googleapis.com/labs-2c-releases-1/CHANGELOG.md | grep "##" | head -n 1
+# sleep 1
 
-sleep 1
+# echo ""
+# echo ""
+# echo "Qual versao deseja instalar? Exemplo: '3.3.8'"
+# read VCAROL
 
-echo ""
-echo ""
-echo "Qual versao deseja instalar? Exemplo: '3.3.8'"
-read VCAROL
-
-echo "Realizando o download da versao $VCAROL"
-wget -q https://storage.googleapis.com/labs-2c-releases-1/$VCAROL/CarolConnectLinux.tar.gz -O /outsourcing/totvs/CarolConnectLinux.tar.gz 2>&1
+echo "Realizando o download da versao $1"
+wget -q https://storage.googleapis.com/labs-2c-releases-1/$1/CarolConnectLinux.tar.gz -O /outsourcing/totvs/CarolConnectLinux.tar.gz 2>&1
 if [ $? -eq 0 ]
 		then printf "\e[1;32mOk.\e[0m\n"
 		else printf "\e[1;31mFalha.\e[0m\n"; echo "Verifique se a versao digitada esta correta e tente novamente."; exit 1;
@@ -117,5 +116,5 @@ echo "."
 echo "."
 echo "."
 
-echo "A atualizacao para a versao $VCAROL finalizada com sucesso!"
+echo "A atualizacao para a versao $1 foi finalizada com sucesso!"
 
