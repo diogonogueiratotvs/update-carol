@@ -14,7 +14,6 @@ echo "==================================================================="
 # sleep 1
 
 # echo ""
-# echo ""
 # echo "Qual versao deseja instalar? Exemplo: '3.3.8'"
 # read VCAROL
 
